@@ -155,5 +155,32 @@
     entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';obs.unobserve(e.target);}});
   },{threshold:0.12});
   revealEls.forEach(el=>obs.observe(el));
+
+  /* Product modal scroll animation on mobile */
+  function animateModalContent(){
+    const modal=document.querySelector('.product-modal.open');
+    if(!modal)return;
+    const children=modal.querySelectorAll('.product-detail-media, .product-detail-copy h2, .detail-price, .product-detail-copy p, .detail-options, .product-detail-copy .primary-btn');
+    children.forEach((el,i)=>{
+      el.style.opacity='0';
+      el.style.transform='translateY(20px)';
+      el.style.transition='opacity .4s ease '+(i*0.08)+'s, transform .4s ease '+(i*0.08)+'s';
+      requestAnimationFrame(()=>{el.style.opacity='1';el.style.transform='none';});
+    });
+  }
+  const modalObs=new MutationObserver((muts)=>{
+    muts.forEach(m=>{if(m.target.classList.contains('open'))setTimeout(animateModalContent,50);});
+  });
+  const pm=$('#productModal');
+  if(pm){
+    modalObs.observe(pm,{attributes:true,attributeFilter:['class']});
+    /* Parallax on product image when scrolling modal */
+    pm.addEventListener('scroll',function(){
+      const img=pm.querySelector('.product-detail-media img');
+      if(!img)return;
+      const y=pm.scrollTop;
+      img.style.transform='translateY('+y*0.15+'px) scale('+(1+y*0.0001)+')';
+    },{passive:true});
+  }
 })();
 </script></body></html>
