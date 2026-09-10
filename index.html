@@ -16,6 +16,7 @@
   <a class="brand home-text-link" href="#home" aria-label="هيبة - الرئيسية"><img src="assets/logo.svg" alt="هيبة"></a>
   <nav class="nav" aria-label="التنقل الرئيسي">
     <a class="active" href="#home">الرئيسية</a><a href="#shop">المتجر</a><a href="#story">عن هيبة</a><a href="#contact">تواصل</a>
+    <span class="nav-indicator"></span>
   </nav>
   <div class="actions">
     <button class="icon-btn" id="searchBtn" aria-label="بحث">⌕</button>
@@ -120,9 +121,21 @@
   homeLinks.forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();if(location.hash==='#home' || location.pathname.endsWith('index.html')){window.scrollTo({top:0,behavior:'smooth'});} else {location.hash='home';} });});
   const navLinks=[...document.querySelectorAll('.nav a')];
   const sections=[...document.querySelectorAll('main section[id]')];
+  const indicator=document.querySelector('.nav-indicator');
+  function moveIndicator(a){
+    if(!a||!indicator)return;
+    const r=a.getBoundingClientRect();
+    const navR=a.parentElement.getBoundingClientRect();
+    indicator.style.left=(r.left-navR.left)+'px';
+    indicator.style.width=r.width+'px';
+  }
   function setActive(id){
     const key=id || 'home';
-    navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+key));
+    navLinks.forEach(a=>{
+      const match=a.getAttribute('href')==='#'+key;
+      a.classList.toggle('active',match);
+      if(match)moveIndicator(a);
+    });
   }
   function updateActive(){
     const y=window.scrollY + 120; let current='home';
@@ -133,5 +146,14 @@
   window.addEventListener('scroll',updateActive,{passive:true});
   window.addEventListener('hashchange',()=>{setActive((location.hash||'#home').slice(1)); updateActive();});
   updateActive();
+  setTimeout(()=>{const active=document.querySelector('.nav a.active');if(active)moveIndicator(active);},100);
+
+  /* Scroll reveal animations */
+  const revealEls=document.querySelectorAll('section[id], .benefits, footer');
+  revealEls.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(32px)';el.style.transition='opacity .6s ease, transform .6s ease';});
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';obs.unobserve(e.target);}});
+  },{threshold:0.12});
+  revealEls.forEach(el=>obs.observe(el));
 })();
 </script></body></html>
