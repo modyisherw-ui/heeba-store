@@ -1,0 +1,8 @@
+[
+  {"id":1,"name":"ثوب سبعة — الأسود المخطط","price":289,"stock":20,"options":[{"name":"المقاس","required":true,"values":["S","M","L","XL","XXL"]},{"name":"الطول","required":true,"values":["قصير","وسط","طويل"]}]},
+  {"id":2,"name":"ثوب سبعة — الأبيض المنقوش","price":299,"stock":18,"options":[{"name":"المقاس","required":true,"values":["S","M","L","XL","XXL"]},{"name":"الطول","required":true,"values":["قصير","وسط","طويل"]}]},
+  {"id":3,"name":"ثوب سبعة — الأسود الفاخر","price":329,"stock":14,"options":[{"name":"المقاس","required":true,"values":["M","L","XL"]}]},
+  {"id":4,"name":"ثوب سبعة — الأبيض الملكي","price":339,"stock":16,"options":[{"name":"المقاس","required":true,"values":["S","M","L","XL"]}]},
+  {"id":5,"name":"قماش ثوب سبعة","price":199,"stock":30,"options":[{"name":"الطول","required":false,"values":["قطعة","لفة"]}]},
+  {"id":6,"name":"طقم هيبة للإهداء","price":379,"stock":9,"options":[{"name":"التغليف","required":false,"values":["عادي","فاخر"]}]}
+]

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130">
+<defs><linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff6b70"/><stop offset=".5" stop-color="#d9484d"/><stop offset="1" stop-color="#8f1f26"/></linearGradient></defs>
+<text x="390" y="75" text-anchor="end" direction="rtl" font-family="Tahoma,Arial,sans-serif" font-size="61" font-weight="800" fill="url(#r)">هيبة</text>
+<path d="M275 96h110" stroke="#b7343b" stroke-width="1.5"/>
+<text x="390" y="111" text-anchor="end" font-family="Arial,sans-serif" font-size="10" letter-spacing="6" fill="#d86b70">HEEBA · SEVEN</text>
+<path d="M45 92c17-7 30-23 35-48 9 13 20 18 35 20-8 16-22 26-41 31-11 3-21 2-29-3Z" fill="none" stroke="url(#r)" stroke-width="4" stroke-linecap="round"/>
+</svg>

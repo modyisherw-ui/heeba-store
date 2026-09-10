@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>هيبة | ثوب سبعة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdn.moyasar.com/mpf/1.15.0/moyasar.css">
+<script src="https://cdn.moyasar.com/mpf/1.15.0/moyasar.js"></script>
+</head>
+<body>
+<header class="header">
+  <a class="brand home-text-link" href="#home" aria-label="هيبة - الرئيسية"><img src="assets/logo.svg" alt="هيبة"></a>
+  <nav class="nav" aria-label="التنقل الرئيسي">
+    <a class="active" href="#home">الرئيسية</a><a href="#shop">المتجر</a><a href="#story">عن هيبة</a><a href="#contact">تواصل</a>
+  </nav>
+  <div class="actions">
+    <button class="icon-btn" id="searchBtn" aria-label="بحث">⌕</button>
+    <button class="cart-btn" id="cartBtn"><span>السلة</span><b id="cartCount">0</b></button>
+    <button class="account-btn" id="accountBtn">تسجيل الدخول</button>
+    
+  </div>
+</header>
+
+<main id="home">
+<section class="hero hero-fullbleed" id="home">
+  <div class="hero-backdrop">
+    <img class="hero-full-img" src="assets/products/hero-scene.png" alt="ثوب سبعة الأسود" fetchpriority="high">
+    <div class="hero-full-shade"></div>
+  </div>
+  <div class="hero-content-overlay">
+    <div class="hero-copy">
+      <span class="eyebrow">HEEBA · SEVEN THOBE</span>
+      <h1>ثوب سبعة<br><em>بهيبة مختلفة.</em></h1>
+      <p>نقشة واضحة، خامة مرتبة، وحضور هادئ بدون مبالغة.</p>
+      <a class="primary-btn hero-shop-btn" href="#offers">تسوق الآن <span>←</span></a>
+      <div class="hero-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    </div>
+  </div>
+  <div class="hero-index"><span>01</span><b>/ 03</b></div>
+  <div class="hero-swipe"><i></i><i></i><i class="on"></i></div>
+  <div class="hero-tag">07 · SEVEN THOBES</div>
+</section>
+
+<section id="offers" class="offers wrap">
+  <div class="offers-head">
+    <div><span class="eyebrow">HEEBA OFFERS</span><h2>العروض والاختيارات</h2></div>
+    <a class="text-link" href="#shop">شاهد المجموعة <span>←</span></a>
+  </div>
+  <div class="offer-grid">
+    <a class="offer-card offer-main" href="#shop">
+      <img src="assets/products/thobe-black.png" alt="ثوب سبعة الأسود" loading="lazy">
+      <div class="offer-overlay"><span>الأكثر طلباً</span><strong>ثوب سبعة الأسود</strong><small>نقشة حضورها واضح.</small><b>اكتشفه الآن ←</b></div>
+    </a>
+    <a class="offer-card" href="#shop">
+      <img src="assets/products/thobe-white.png" alt="ثوب سبعة الأبيض" loading="lazy">
+      <div class="offer-overlay"><span>وصل حديثاً</span><strong>ثوب سبعة الأبيض</strong><small>تفاصيل هادئة ونظيفة.</small><b>اكتشفه الآن ←</b></div>
+    </a>
+    <a class="offer-card offer-surface" href="#shop">
+      <div class="offer-number">07</div><div class="offer-surface-copy"><span>SEVEN THOBES</span><strong>اختياراتك<br>بطريقتك.</strong><small>اختر المقاس والطول والتفاصيل داخل كل منتج.</small><b>تصفح الكل ←</b></div>
+    </a>
+  </div>
+</section>
+<section class="categories wrap">
+  <div class="section-title"><div><span class="eyebrow">EXPLORE COLLECTION</span><h2>تصفح المجموعة</h2></div><p>مجموعة مرتبة، صور واضحة، وتجربة شراء بسيطة.</p></div>
+  <div class="category-grid">
+    <button class="category" data-cat="Shirts"><div class="category-art img-black"><img src="assets/products/thobe-black.png" alt=""></div><strong>ثوب سبعة</strong><small>SEVEN THOBES</small><i>←</i></button>
+    <button class="category" data-cat="New"><div class="category-art img-white"><img src="assets/products/thobe-white.png" alt=""></div><strong>الجديد</strong><small>NEW ARRIVALS</small><i>←</i></button>
+    <button class="category" data-cat="Signature"><div class="category-art img-black"><img src="assets/products/thobe-black.png" alt=""></div><strong>التوقيع</strong><small>SIGNATURE</small><i>←</i></button>
+    <button class="category" data-cat="Fabric"><div class="category-art fabric-art"></div><strong>الأقمشة</strong><small>FABRICS</small><i>←</i></button>
+    <button class="category" data-cat="Gifts"><div class="category-art gift-art"></div><strong>هدايا</strong><small>GIFTS</small><i>←</i></button>
+  </div>
+</section>
+
+<section id="shop" class="shop wrap">
+  <div class="shop-head"><div><span class="eyebrow">SEVEN THOBES · 07</span><h2>ثوب سبعة</h2></div><div id="filters" class="filters"></div></div>
+  <div id="products" class="products"></div>
+</section>
+
+<section id="story" class="story wrap">
+  <div class="story-copy"><span class="eyebrow">THE HEEBA STANDARD</span><h2>الفخامة<br><em>في التفاصيل.</em></h2><p>هيبة تختار لك القطعة التي تتكلم عنك. تصميم نظيف، حضور واضح، وتفاصيل محسوبة بدون مبالغة.</p><a class="outline-btn" href="#shop">اكتشف المجموعة <span>←</span></a></div>
+  <div class="story-art"><strong>07</strong><span>SEVEN THOBE</span><small>MADE FOR PRESENCE</small></div>
+</section>
+
+<section class="benefits wrap">
+  <div><b>✓</b><strong>جودة مرتبة</strong><small>خامات مختارة بعناية</small></div>
+  <div><b>↗</b><strong>شحن سريع</strong><small>تجربة طلب سهلة</small></div>
+  <div><b>◇</b><strong>تغليف يليق بك</strong><small>من أول لحظة</small></div>
+  <div><b>✦</b><strong>دعم مميز</strong><small>نحن في خدمتك</small></div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="footer-brand"><a class="footer-home-text" href="#home" aria-label="العودة للرئيسية"><img src="assets/logo.svg" alt="هيبة"></a><p>الأناقة .. بهيبة.</p></div>
+  <div class="footer-links"><a href="#home">الرئيسية</a><a href="#shop">المتجر</a><a href="#story">عن هيبة</a><a href="#contact">تواصل</a></div>
+  <div class="copyright">© 2026 HEEBA — جميع الحقوق محفوظة</div>
+</footer>
+
+<div id="searchPanel" class="modal-layer" aria-hidden="true"><div class="search-modal"><button id="closeSearch" class="modal-close" aria-label="إغلاق">×</button><span class="eyebrow">SMART SEARCH</span><h2>ابحث عن ثوبك</h2><input id="searchInput" placeholder="مثال: أسود، أبيض، سبعة..." autocomplete="off"><div id="searchHint">اكتب لتصفية المنتجات مباشرة</div></div></div>
+<div id="overlay" class="overlay"></div>
+
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-head"><div><span class="eyebrow">YOUR BAG</span><h3>سلة التسوق</h3></div><button id="closeCart" class="modal-close">×</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom"><div><span>الإجمالي</span><b id="cartTotal">0 ر.س</b></div><button class="primary-btn full" id="checkout">متابعة للدفع <span>←</span></button></div>
+</aside>
+
+<div id="productModal" class="modal-layer" aria-hidden="true"><div class="product-modal"><button class="modal-close" data-close="productModal">×</button><div class="product-detail"><div class="product-detail-media"><img id="detailImage" alt=""></div><div class="product-detail-copy"><span id="detailBadge" class="badge"></span><h2 id="detailName"></h2><div class="detail-price" id="detailPrice"></div><p id="detailDescription"></p><div id="detailOptions" class="detail-options"></div><button id="detailAdd" class="primary-btn full">أضف للسلة <span>←</span></button></div></div></div></div>
+
+<div id="paymentModal" class="modal-layer" aria-hidden="true"><div class="payment-modal"><button class="modal-close" data-close="paymentModal">×</button><div class="payment-head"><div class="checkout-brand"><span class="secure-dot">✓</span><div><span class="eyebrow">SECURE CHECKOUT</span><h2>إتمام الدفع</h2></div></div><p>اختر وسيلة الدفع المفضلة. بيانات البطاقة لا تُحفظ في متجر هيبة.</p></div><div class="payment-methods payment-methods-premium"><button class="pay-method active" data-method="card"><span class="pay-logo-stack"><img src="assets/icons/mada.svg" alt="mada"><img src="assets/icons/visa.svg" alt="Visa"></span><div><b>مدى + Visa</b><small>دفع بالبطاقة عبر بوابة دفع آمنة</small></div><i></i></button><button class="pay-method" data-method="apple"><span class="pay-logo-single"><img src="assets/icons/apple-pay.svg" alt="Apple Pay"></span><div><b>Apple Pay</b><small>دفع سريع على الأجهزة المدعومة</small></div><i></i></button><button class="pay-method" data-method="google"><span class="pay-logo-single"><img src="assets/icons/google-pay.svg" alt="Google Pay"></span><div><b>Google Pay</b><small>دفع سريع من Google Wallet</small></div><i></i></button></div><div id="paymentError" class="payment-error" hidden></div><div id="paymentProvider" class="payment-provider" hidden><div id="cardFormMount" hidden></div><div id="walletMessage" class="wallet-message" hidden></div></div><div class="order-summary premium-summary"><div class="summary-head"><h3>ملخص الطلب</h3><span>الدفع بالريال السعودي</span></div><div id="paymentItems"></div><div class="summary-total"><span>الإجمالي</span><b id="paymentTotal">0 ر.س</b></div><div class="checkout-fields"><label>الاسم الكامل<input id="checkoutName" placeholder="اسم المستلم" autocomplete="name"></label><label>رقم الجوال<input id="checkoutPhone" inputmode="tel" placeholder="05xxxxxxxx" autocomplete="tel"></label><label>العنوان المختصر<input id="checkoutAddress" placeholder="المدينة، الحي، الشارع" autocomplete="street-address"></label></div><button id="payContinue" class="primary-btn full payment-continue">متابعة الدفع <span>←</span></button><div class="payment-trust"><span>🔒</span><p>اتصال مشفّر · تحقق 3D Secure عند طلبه · التحقق من المبلغ يتم من الخادم</p></div></div></div></div>
+<div id="authModal" class="modal-layer" aria-hidden="true"><div class="auth-card"><button id="closeAuth" class="modal-close">×</button><span class="eyebrow">HEEBA ACCOUNT</span><h2 id="authTitle">تسجيل الدخول</h2><p id="authHint">أدخل رقم جوالك وسنرسل رمز تحقق عبر واتساب.</p><div id="phoneStep"><label>رقم الجوال<input id="phoneInput" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx"></label><button id="sendOtp" class="primary-btn full">إرسال رمز واتساب</button></div><div id="otpStep" hidden><label>رمز التحقق<input id="otpInput" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••"></label><button id="verifyOtp" class="primary-btn full">تأكيد الدخول</button><button id="backPhone" class="text-btn">تغيير الرقم</button></div><p id="authStatus" class="auth-status"></p></div></div>
+
+<script src="assets/js/auth.js"></script><script src="assets/js/store.js"></script>
+<script>
+(function(){
+  const homeLinks=document.querySelectorAll('.home-text-link, .footer-home-text');
+  homeLinks.forEach(function(el){el.addEventListener('click',function(e){e.preventDefault();if(location.hash==='#home' || location.pathname.endsWith('index.html')){window.scrollTo({top:0,behavior:'smooth'});} else {location.hash='home';} });});
+  const navLinks=[...document.querySelectorAll('.nav a')];
+  const sections=[...document.querySelectorAll('main section[id]')];
+  function setActive(id){
+    const key=id || 'home';
+    navLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+key));
+  }
+  function updateActive(){
+    const y=window.scrollY + 120; let current='home';
+    sections.forEach(sec=>{ if(y >= sec.offsetTop) current=sec.id; });
+    setActive(current);
+  }
+  navLinks.forEach(a=>a.addEventListener('click',()=>setTimeout(updateActive,80)));
+  window.addEventListener('scroll',updateActive,{passive:true});
+  window.addEventListener('hashchange',()=>{setActive((location.hash||'#home').slice(1)); updateActive();});
+  updateActive();
+})();
+</script></body></html>
